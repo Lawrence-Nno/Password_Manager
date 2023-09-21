@@ -20,4 +20,4 @@ It is very user friendly and doesn't need much instructions to grasp. Below are 
 * Lawrence Nno <lawrence.nno@gmail.com>
 
 ### License 🔒
-* Free (Open Source)
+* [MIT](https://choosealicense.com/licenses/mit/)
