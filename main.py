@@ -34,7 +34,7 @@ def generate_pass():
 
 
 def save_details():
-    web_data = website_entry.get()
+    web_data = (website_entry.get()).lower()
     email_data = email_entry.get()
     pass_data = pass_entry.get()
 
@@ -52,6 +52,24 @@ def save_details():
             pass_entry.delete(0, 'end')
             with open("data.txt") as data:
                 print(data.read())
+
+
+# ---------------------------- RETRIEVE PASSWORD ------------------------------- #
+
+
+def retrieve_password():
+    if website_entry.get() == "":
+        messagebox.showwarning(title="Warning", message="Enter the website whose password you want to retrieve.")
+    with open("data.txt") as data:
+        saved_data = data.readlines()
+        web_name = (website_entry.get()).lower()
+        for string in saved_data:
+            if web_name in string:
+                print((saved_data[saved_data.index(f"Website: {web_name}\n") + 2]).replace("Password: ", ""))
+                password = (saved_data[saved_data.index(f"Website: {web_name}\n") + 2]).replace("Password: ", "")
+                password = password.replace("\n", "")
+                pass_entry.insert(0, password)
+                pyperclip.copy(password)
 
 # ---------------------------- UI SETUP ------------------------------- #
 
@@ -91,6 +109,8 @@ generate_pass_button.grid(column=2, row=3)
 add_button = tkinter.Button(text="Add", width=45, command=save_details, fg=RED)
 add_button.grid(column=1, row=4, columnspan=2)
 
+retrieve_button = tkinter.Button(text="Retrieve", width=45, command=retrieve_password, fg=RED)
+retrieve_button.grid(column=1, row=5, columnspan=2)
 
 
 window.mainloop()
