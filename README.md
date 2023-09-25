@@ -9,6 +9,7 @@ It is very user friendly and doesn't need much instructions to grasp. Below are 
 * Step 2: Fill in the email or username in its field.
 * Step 3: Click on `Generate Password` button. This creates the password, fills the password field automatically and copies it to the clipboard for easy pasting on the website/app.
 * Step 4: Click on `Add` button. This asks for a confirmation if you are okay with the details entered and saves the details on a local file after confirmation.
+* Step 5: If you have forgotten the password or you want to retrieve the password when you want to log in or for any reason, Just enter the website name e.g. <facebook.com> and click on `Retrieve button`, the password will appear on the password field and also automatically to the `clipboard`
 
 ### App Screenshot
 ![Password Manager Screenshot](https://github.com/Lawrence-Nno/Password_Manager/blob/main/screenshot.JPG)
@@ -20,4 +21,4 @@ It is very user friendly and doesn't need much instructions to grasp. Below are 
 * Lawrence Nno <lawrence.nno@gmail.com>
 
 ### License 🔒
-* [MIT](https://choosealicense.com/licenses/mit/)
+* Free (Open Source)
